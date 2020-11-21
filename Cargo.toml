@@ -7,7 +7,6 @@ version = "0.1.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-criterion = "*"
 csv = "*"
 flate2 = "*"
 itertools = "*"
@@ -42,7 +41,7 @@ rpath = false
 
 [profile.release]
 codegen-units = 1
-debug = false
+debug = true
 debug-assertions = false
 incremental = false
 lto = "fat"
