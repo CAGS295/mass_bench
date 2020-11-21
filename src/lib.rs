@@ -55,19 +55,16 @@ pub fn input_pair(
     return Ok((ts, query));
 }
 
+static QUERY_PATH: &str = "data/ecg_query.tar.gz";
+static TS_PATH: &str = "data/ecg.tar.gz";
+
 ///short example on the mass method over a subsample of a time series and a query.
 pub fn short() -> Result<Vec<(usize, f64)>, IOError> {
     {
         const N: usize = 100;
         const Q: usize = 10;
 
-        let (ts, query) = input_pair(
-            Some(N),
-            Some(Q),
-            "python/ecg.tar.gz",
-            "python/ecg_query.tar.gz",
-        )
-        .unwrap();
+        let (ts, query) = input_pair(Some(N), Some(Q), TS_PATH, QUERY_PATH).unwrap();
 
         let ts = &ts.series[..];
         let query = &query.series[..];
@@ -82,8 +79,7 @@ pub fn short() -> Result<Vec<(usize, f64)>, IOError> {
 }
 
 pub fn full() -> Result<Vec<(usize, f64)>, IOError> {
-    let (ts, query) =
-        input_pair(None, None, "python/ecg.tar.gz", "python/ecg_query.tar.gz").unwrap();
+    let (ts, query) = input_pair(None, None, TS_PATH, QUERY_PATH).unwrap();
 
     let query = &query.series[..];
     let ts = &ts.series[..];
