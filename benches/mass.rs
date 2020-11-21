@@ -7,13 +7,8 @@ pub fn criterion_benchmark(c: &mut Criterion) {
     const N: usize = 100_000;
     const Q: usize = 10;
 
-    let (ts, query) = input_pair(
-        Some(N),
-        Some(Q),
-        "python/ecg.tar.gz",
-        "python/ecg_query.tar.gz",
-    )
-    .unwrap();
+    let (ts, query) =
+        input_pair(Some(N), Some(Q), "data/ecg.tar.gz", "data/ecg_query.tar.gz").unwrap();
 
     let query = &query.series[..];
     let ts = &ts.series[..];

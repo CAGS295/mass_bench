@@ -11,7 +11,7 @@ criterion = "*"
 csv = "*"
 flate2 = "*"
 itertools = "*"
-mass = {path = "mass"}
+mass = {path = "../mass"}
 tar = "*"
 
 [dev-dependencies]
