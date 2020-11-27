@@ -69,7 +69,7 @@ pub fn short() -> Result<Vec<(usize, f64)>, IOError> {
         let ts = &ts.series[..];
         let query = &query.series[..];
 
-        let batch_size = N;
+        let batch_size = N / 2;
         let top_matches = 1;
         let jobs = 1;
 
