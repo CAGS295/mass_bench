@@ -2,30 +2,40 @@
 The aim of this repo is to keep track of the optimization efforts in [mass](https://github.com/CAGS295/mass).
 ---
 
-### *V0.1.0-alpha-2d91e4dc*
+## *V0.1.0-alpha-3c4cf5aa*
+---
+MASS V3 algorithm.
+Bug fixes in batch size partition.
 
+ Short Bench time:   [19.244 ms 19.295 ms 19.353 ms]
+
+    change: [-25.106% -24.806% -24.521%] (p = 0.00 < 0.05)
+    Performance has improved.
+
+Found 2 outliers among 100 measurements (2.00%)
+
+  2 (2.00%) high severe
+
+![v0.1.0](flamegraphs/V0.1.0-alpha-2d91e4dc.svg)
+
+---
+
+## *V0.1.0-alpha-2d91e4dc*
+---
 Initial release.
-
- Benchmarking Short Bench: Warming up for 3.0000 s
  
- Benchmarking Short Bench: Collecting 100 samples in estimated 5.0151 s (200 iterations)
-
- Benchmarking Short Bench: Analyzing
- 
- Short Bench time:   [25.724 ms 25.957 ms 26.209 ms]
- change: [+0.2346% +1.1557% +2.3367%] (p = 0.02 < 0.05)
- Change within noise threshold.
+Short Bench time:   [25.724 ms 25.957 ms 26.209 ms]
 
  Found 2 outliers among 100 measurements (2.00%)
 
   2 (2.00%) high mild
 
----
-![v0.1.0](flamegraphs/v0.1.0.svg)
+
+![v0.1.0](flamegraphs/V0.1.0-alpha-2d91e4dc.svg)
 
 ---
 
-### Dont forget to allow profiling events
+## Dont forget to allow profiling events
 
 ```bash
  $ echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
