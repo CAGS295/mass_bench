@@ -6,6 +6,8 @@ bench_save:
 bench:
 	cargo bench --bench mass -- --baseline $latest
 
-flame:
+flame: build
 	flamegraph -o flamegraphs/$(latest).svg -- target/release/main
 
+build:
+	cargo build --release
