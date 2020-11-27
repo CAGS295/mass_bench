@@ -105,6 +105,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "Takes too long for quick tests"]
     fn full() -> Result<(), IOError> {
         let top = super::full()?;
         let (a, _): (Vec<_>, Vec<_>) = top.iter().copied().unzip();
