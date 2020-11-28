@@ -1,7 +1,25 @@
 # Welcome to the benchmarks workspace for MASS in rust.
 The aim of this repo is to keep track of the optimization efforts in [mass](https://github.com/CAGS295/mass).
----
 
+---
+## *V0.1.0-alpha-851ebbd9*
+---
+JIT mean and standard deviation; complexity goes from  O(nm) down to O(n) for m << n.
+Time complexity dominated by fft with O(nlogn).
+
+
+Short Bench time:   [12.870 ms 12.905 ms 12.946 ms]
+
+    change: [-35.648% -34.853% -34.165%] (p = 0.00 < 0.05)
+    Performance has improved.
+
+Found 9 outliers among 100 measurements (9.00%)
+
+  5 (5.00%) high mild
+
+  4 (4.00%) high severe
+
+![v0.1.0](flamegraphs/V0.1.0-alpha-851ebbd9.svg)
 ## *V0.1.0-alpha-3c4cf5aa*
 ---
 MASS V3 algorithm.
