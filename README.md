@@ -1,6 +1,23 @@
 # Welcome to the benchmarks workspace for MASS in rust.
 The aim of this repo is to keep track of the optimization efforts in [mass](https://github.com/CAGS295/mass).
 
+
+---
+## *V0.1.0-alpha-81a7f91c*
+---
+Parallelize the distance loop with a par_bridge from rayon_rs. Reduced batch size to N/8 for load balancing purposes.
+
+Short Bench time:   [3.8908 ms 3.9097 ms 3.9293 ms]
+
+
+    change: [-72.125% -71.896% -71.677%] (p = 0.00 < 0.05)
+    Performance has improved.
+
+Found 1 outliers among 100 measurements (1.00%)
+
+  1 (1.00%) high mild
+![v0.1.0](flamegraphs/V0.1.0-alpha-81a7f91c.svg)
+
 ---
 ## *V0.1.0-alpha-851ebbd9*
 ---

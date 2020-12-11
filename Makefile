@@ -1,5 +1,5 @@
-latest= V0.1.0-alpha-851ebbd9
-previous= V0.1.0-alpha-3c4cf5aa
+latest= V0.1.0-alpha-81a7f91c
+previous= V0.1.0-alpha-851ebbd9
 
 bench_save:
 	cargo bench --bench mass  -- --save-baseline $(latest)
