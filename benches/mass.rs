@@ -13,7 +13,7 @@ pub fn criterion_benchmark(c: &mut Criterion) {
     let query = &query.series[..];
     let ts = &ts.series[..];
 
-    let batch_size = N / 8;
+    let batch_size = N / 16;
     let top_matches = 10;
     let jobs = 8usize;
 
