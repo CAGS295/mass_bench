@@ -1,6 +1,20 @@
 # Welcome to the benchmarks workspace for MASS in rust.
 The aim of this repo is to keep track of the optimization efforts in [mass](https://github.com/CAGS295/mass).
 
+
+---
+## *V0.1.0-alpha-ffa7b3a79* 
+---
+use jemallocator as main memory allocator.
+
+Short Bench time:   [3.4873 ms 3.5116 ms 3.5364 ms]                         
+
+    change: [-4.9792% -4.2555% -3.4013%] (p = 0.00 < 0.05)
+    Performance has improved.
+Found 1 outliers among 100 measurements (1.00%)
+
+  1 (1.00%) high mild
+
 ---
 ## Short bench update on *V0.1.0-alpha-52c95647* 
 ---
@@ -8,7 +22,6 @@ jobs count = 1 -> 8 : previously, the jobs parameter had no effect and always us
 
 
 Short Bench time:   [3.6855 ms 3.7184 ms 3.7708 ms]
-
 
     change: [-6.0322% -5.0202% -3.4818%] (p = 0.00 < 0.05)
     Performance has improved.
@@ -22,7 +35,6 @@ Found 2 outliers among 100 measurements (2.00%)
 Parallelize the distance loop with a par_bridge from rayon_rs. Reduced batch size to N/8 for load balancing purposes.
 
 Short Bench time:   [3.8908 ms 3.9097 ms 3.9293 ms]
-
 
     change: [-72.125% -71.896% -71.677%] (p = 0.00 < 0.05)
     Performance has improved.
