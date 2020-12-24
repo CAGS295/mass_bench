@@ -1,7 +1,14 @@
 # Welcome to the benchmarks workspace for MASS in rust.
 The aim of this repo is to keep track of the optimization efforts in [mass](https://github.com/CAGS295/mass).
 
+---
+## Small bench changes *bench-3c78dc82*
+---
+batch_size N/8 -> N/16 : increase batch count to get better load balancing.
+Short Bench time:   [3.1212 ms 3.1328 ms 3.1444 ms]                         
 
+  change: [-15.094% -14.584% -14.112%] (p = 0.00 < 0.05)
+  Performance has improved.
 ---
 ## *V0.1.0-alpha-ffa7b3a79* 
 ---
