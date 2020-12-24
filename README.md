@@ -2,6 +2,14 @@
 The aim of this repo is to keep track of the optimization efforts in [mass](https://github.com/CAGS295/mass).
 
 ---
+## *V0.1.0-alpha-78ef69c9*
+Short Bench time:   [2.8952 ms 2.9133 ms 2.9316 ms]                         
+
+    change: [-3.7135% -2.9009% -2.0424%] (p = 0.00 < 0.05)
+    Performance has improved.
+---
+
+---
 ## Small bench changes *bench-3c78dc82*
 ---
 batch_size N/8 -> N/16 : increase batch count to get better load balancing.
