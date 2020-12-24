@@ -15,10 +15,12 @@ pub fn criterion_benchmark(c: &mut Criterion) {
 
     let batch_size = N / 8;
     let top_matches = 10;
-    let jobs = 1;
+    let jobs = 8usize;
+
+    mass::init_pool(jobs);
 
     c.bench_function("Short Bench", |b| {
-        b.iter(|| mass_batch(ts, query, batch_size, top_matches, jobs))
+        b.iter(|| mass_batch(ts, query, batch_size, top_matches))
     });
 }
 

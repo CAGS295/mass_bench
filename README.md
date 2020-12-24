@@ -1,6 +1,20 @@
 # Welcome to the benchmarks workspace for MASS in rust.
 The aim of this repo is to keep track of the optimization efforts in [mass](https://github.com/CAGS295/mass).
 
+---
+## Short bench update on *V0.1.0-alpha-52c95647* 
+---
+jobs count = 1 -> 8 : previously, the jobs parameter had no effect and always used all logical cores. There is no job parameter anymore by default and always uses all logical cores. Manually setting the thread count requires to disable the "auto" feature and calling `init_pool` to init the global pool.
+
+
+Short Bench time:   [3.6855 ms 3.7184 ms 3.7708 ms]
+
+
+    change: [-6.0322% -5.0202% -3.4818%] (p = 0.00 < 0.05)
+    Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+
+  2 (2.00%) high severe
 
 ---
 ## *V0.1.0-alpha-81a7f91c*

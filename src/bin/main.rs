@@ -9,7 +9,6 @@ fn main() {
 
     let batch_size = 10000;
     let top_matches = 4;
-    let jobs = 1;
 
-    let _top = mass_batch(ts, query, batch_size, top_matches, jobs);
+    let _top = mass_batch(ts, query, batch_size, top_matches);
 }

@@ -71,9 +71,9 @@ pub fn short() -> Result<Vec<(usize, f64)>, IOError> {
 
         let batch_size = N / 2;
         let top_matches = 1;
-        let jobs = 1;
 
-        let top = mass_batch(ts, query, batch_size, top_matches, jobs);
+        let top = mass_batch(ts, query, batch_size, top_matches);
+
         Ok(top)
     }
 }
@@ -86,8 +86,7 @@ pub fn full() -> Result<Vec<(usize, f64)>, IOError> {
 
     let batch_size = 10000;
     let top_matches = 4;
-    let jobs = 1;
-    let top = mass_batch(ts, query, batch_size, top_matches, jobs);
+    let top = mass_batch(ts, query, batch_size, top_matches);
     Ok(top)
 }
 
