@@ -10,7 +10,7 @@ version = "0.1.0"
 csv = "*"
 flate2 = "*"
 itertools = "*"
-mass = {path = "../mass", features = ["jemalloc", "pseudo_distance"], default-features = false}
+super_MASS = {path = "../super_MASS", features = ["jemalloc", "pseudo_distance"], default-features = false}
 tar = "*"
 
 [dev-dependencies]

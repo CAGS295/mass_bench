@@ -1,5 +1,5 @@
-use mass::mass_batch;
 use mass_bench::input_pair;
+use super_MASS::mass_batch;
 
 fn main() {
     let (ts, query) = input_pair(None, None, "data/ecg.tar.gz", "data/ecg_query.tar.gz").unwrap();

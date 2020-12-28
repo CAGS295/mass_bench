@@ -1,8 +1,7 @@
 use csv::ReaderBuilder;
 use flate2::read::GzDecoder;
-use mass::mass_batch;
-use mass::time_series::{self, Record};
-// use timeit::{timeit, timeit_loops};
+use super_MASS::mass_batch;
+use super_MASS::time_series::{self, Record, TimeSeries};
 
 use std::fs::File;
 pub use std::io::Error as IOError;
@@ -39,7 +38,6 @@ pub fn load_series<T>(
     Ok(series)
 }
 
-use mass::time_series::TimeSeries;
 /// Load samples from time series and query.
 pub fn input_pair(
     n: Option<usize>,

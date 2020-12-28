@@ -1,6 +1,6 @@
 use criterion::{criterion_group, criterion_main, Criterion};
 
-use mass::mass_batch;
+use super_MASS::mass_batch;
 use mass_bench::input_pair;
 
 pub fn criterion_benchmark(c: &mut Criterion) {
@@ -17,7 +17,7 @@ pub fn criterion_benchmark(c: &mut Criterion) {
     let top_matches = 10;
     let jobs = 8usize;
 
-    mass::init_pool(jobs);
+    super_MASS::init_pool(jobs);
 
     c.bench_function("Short Bench", |b| {
         b.iter(|| mass_batch(ts, query, batch_size, top_matches))
