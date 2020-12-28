@@ -1,7 +1,9 @@
 use csv::ReaderBuilder;
 use flate2::read::GzDecoder;
-use super_MASS::mass_batch;
-use super_MASS::time_series::{self, Record, TimeSeries};
+use super_mass::{
+    mass_batch,
+    time_series::{self, Record, TimeSeries},
+};
 
 use std::fs::File;
 pub use std::io::Error as IOError;
