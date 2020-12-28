@@ -1,5 +1,5 @@
 # Welcome to the benchmarks workspace for MASS in rust.
-The aim of this repo is to keep track of the optimization efforts in [super_mass](https://github.com/CAGS295/super_mass).
+The aim of this repo is to keep track of the optimization efforts in [super_mass](https://github.com/CAGS295/mass).
 
 ---
 ## *V0.1.0-alpha-78ef69c9*
